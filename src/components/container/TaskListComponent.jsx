@@ -12,11 +12,10 @@ const TaskListComponent = () => {
     const defaultTask3 = new Task('Example3', 'Description3', false, LEVELS.BLOCKING)
     
     const [tasks, setTasks] = useState([defaultTask1,defaultTask2,defaultTask3]);
-    const [isLoading, setIsLoading] = useState(true);
-
+    
     useEffect(() => {
         console.log('Task State has been modified')
-        setIsLoading(false)
+    
         return () => {
             console.log('Tasklist Component is going to unmount...')
         };
