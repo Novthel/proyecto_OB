@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { LEVELS } from '../../models/levels.enum';
 import { Task } from '../../models/task.class';
 import TaskForm from '../pure/forms/TaskForm';
+import TaskFormik from '../pure/forms/TaskFormik';
 import TaskComponent from '../pure/TaskComponent';
 
 
@@ -89,7 +90,8 @@ const TaskListComponent = () => {
                     <div className='card-body' data-mdb-perfect-scrollbar='true' style={ { position: 'relative', height: '300px'} }>
                        { isLoading ? <p>loading Task...</p> : taskTable } 
                     </div> 
-                    <TaskForm  add={ addNewTask } lengthTasks={ tasks.length } /> 
+                    {/* <TaskForm  add={ addNewTask } lengthTasks={ tasks.length } />  */}
+                    <TaskFormik add={ addNewTask } />
                 </div>   
             </div>    
         </>
